@@ -1,4 +1,5 @@
 {
-    "aws-access-key": "AKIAIVA7LTWDSLJ3ZO7A", 
+    "aws-access-key": "AKIAIVA7LTWDSLJ3ZO7A",
+    "aws-bucket-name": "plumgarage.com",
     "aws-bucket-website": "plumgarage.com.s3-website-us-west-1.amazonaws.com"
 }
