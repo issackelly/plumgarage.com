@@ -7,4 +7,17 @@ body {
     width: 480px;
     margin: 0 auto;
     font-family: Helvetica, sans-serif;
+    padding: 4px;
+}
+
+a {
+    color: #562335;
+}
+
+footer {
+    font-size: 10px;
+    color: white;
+}
+footer a {
+    color: white;
 }

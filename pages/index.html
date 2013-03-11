@@ -1,3 +1,21 @@
 {% extends "base.html" %}
-{% block content %}
+
+{% block styles %}
+{{ block.super }}
+<style type="text/css">
+body {
+    margin-top: 10%;
+}
+</style>
 {% endblock %}
+
+{% block content %}
+    <h2><a href="/controller.html">Controller</a></h2>
+    <h2><a href="/about.html">About Plum Garage</a></h2>
+    <h2><a href="http://issackelly.com/blog/2012/08/04/wemo-api-hacking/">Wemo Hack</a></h2>
+    <h2><a href="http://issackelly.com/blog/2012/11/10/philips-hue-api-hacking/">Hue Hack</a></h2>
+
+{% endblock %}
+
+
+{% block footer %}{% endblock %}
