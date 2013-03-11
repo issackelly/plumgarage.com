@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>The Plum Garage Controller</h1>
+<p>The controller is used as a nervous center to accept and process events, and
+    manifest physical changes to connected devices
+
+<h2>Devices</h2>
+<p>Devices can have actions and events. Actions are things the controller tells the device to do. Events are things the controller can know about, either through asking the device, or the device pro-actively telling the controller.
+
+<h2>Recipes</h2>
+<p>Recipes are pre-defined groups of actions. Examples follow
+    <ul>
+        <li>When I hit this button, it's movie time. Turn on the projector, dim the lights, close the blinds and take my computer to netflix.
+        <li>Between noon and 4PM if I am in my office, move the blinds to 75 degrees CCW
+        <li>When I get home from work, turn on the porch light for 10 minutes, unlock the door until it is opened and closed, and turn on the hall light.
+    </ul>
+
+<h2>Manifestation</h2>
+<p>The rest, they say, are details. Details here are imporant, but in our case, they're still very much open for discussion.</p>
+
+<h3>Hardware</h3>
+<p>The current assumption is that the controller will run on a Raspberry Pi.
+    While many, many different hardware configurations could be used to achieve the design goals, the Raspberry Pi provides several interesting features.
+    It is inexpensive, low-powered, open source, it has the ability to be expanded with other hardware modules which interconnect to non-IP based systems, and has a strong community around it already.
+<p>Other devices that should work include -- A rooted router + lots of software fiddling, like devices running Tomato Firmware, or DD-WRT + optware.
+<p>A Desktop system (for individuals with home media servers and the like)
+<p>A Server system (for IT applications)
+
+<h3>Software</h3>
+<p>The software will be is a light-weight django or flask web application.
+    Modules will be written in python on a per-device basis (e.g. plum-philips-hue, plum-wemo-outlet).
+    It will be an open and modular system, and it should be easy to install the modules applicable to your installation, or to create new modules when necessary.
+    It will provide a simple HTTP api following REST principles when applicable,
+<p>The data-store will be a JSON-type document store, probably CouchDB, maybe Riak, maybe flat-files, it should be modular and swap out for systems with varying requirements.
+<p>One or more additional processes will be running to process out-of-band items, trigger events and handle periodics.
+    Probably this will be managed with celery, ideally it will use a very light queue, something with the same data store, or possibly redis.
+    This should also be modular for systems with different requirements.
+
+<h4>Preliminary API Documentation</h4>
+<code>
+GET /device-types
+
+GET /devices
+POST /devices
+
+GET /devices/events
+POST /devices/events
+
+# This is for bypassing the event/recipe system, and triggering
+# actions directly
+POST /devices/actions
+
+GET /recipes
+POST /recipes
+
+GET /status
+</code>
+
+<h3>Security</h3>
+<p>I don't know what people want here. I probably won't be running this over an insecure network, or exposing any of it to the larger internet, please if you have opinions, send them in.
+{% endblock %}
