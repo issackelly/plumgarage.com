@@ -4,16 +4,30 @@
 {{ block.super }}
 <style type="text/css">
 body {
-    margin-top: 10%;
+    margin-top: 1%;
+}
+h1.big {
+    font-size: 400%;
 }
 </style>
 {% endblock %}
 
 {% block content %}
+    <h1 class="big">Plum Garage</h1>
     <h2><a href="/controller.html">Controller</a></h2>
-    <h2><a href="/about.html">About Plum Garage</a></h2>
+    <hr>
+    <h1>Get Involved</h1>
+    <h2><a href="https://groups.google.com/forum/?fromgroups#!forum/plumgarage">Mailing List</a></h2>
+
+    <hr>
+    <h1>Follow</h1>
+    <h2><a href="https://twitter.com/plumgarage">Twitter</a></h2>
+    <h2><a href="https://github.com/plumgarage">Github</a></h2>
+    <hr/>
     <h2><a href="http://issackelly.com/blog/2012/08/04/wemo-api-hacking/">Wemo Hack</a></h2>
     <h2><a href="http://issackelly.com/blog/2012/11/10/philips-hue-api-hacking/">Hue Hack</a></h2>
+    <hr/>
+    <h2><a href="/about.html">About Plum Garage</a></h2>
 
 {% endblock %}
 
