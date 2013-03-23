@@ -1,0 +1,75 @@
+title: Introducing Plum Garage at PyCon 2013
+author: Issac Kelly
+date: 23-03-2013
+
+{% extends "blog_post.html" %}
+
+{% block body %}
+<p>I had the opportunity to present some of the past work I did this year at the poster session. In the past several months I reverse engineered the API protocols of a couple of consumer devices in order to write python clients for them.
+
+<figure>
+    <img src="/static/img/jaaaarel-plum-garage.jpg">
+    <figcaption>Issac Kelly presenting at PyCon 2013. Image taken by <a href="https://twitter.com/jaaaarel">Taavi Burns</a></figcaption>
+</figure>
+
+<p>I published my work in this area and encouraged people using it to get in touch with me about what they're doing. The response I got here was amazing, and the imagination and potential unlocked by having open, simple access to the physical things around people has been quite impressive.
+
+<h3>The Poster</h3>
+
+<p>The poster sessions at pycon 2013 were full of people more impressive and knowledgeable than me. That was awesome.
+
+<p>I felt my work was especially suited for a poster session. I could talk for a couple of minutes about what I did, and interact with the people coming by.
+
+<p>I built a poster with the intent of using it as a speaking guide, not as a standalone piece. This meant you had to listen to me to understand why I zip-tied some junk to a piece of wood and stood next to people doing actual research.
+
+<p>I designed my board with the intention of reflecting the state of the work. It is garage quality, hacker friendly, and devoid of the polish necessary to be presented to a broad audience. You may or may not notice that's the current state of this website too.
+
+<p>I borrowed a projector, projected some images and text onto my board, and used a drill and zip ties to get the devices to stay. I also built a "white" board from another board + a piece of acrylic. The acrylic was a little more fragile than I hoped and I cracked it a couple of times. Almost nobody, including me (except Daniel), used the white board. It was more of a concept anyway, so that didn't matter much.
+
+<img src="https://lh6.googleusercontent.com/-dKIWNMWOI8s/UTtzBy-scDI/AAAAAAAAFNk/ayY11ZkCOTc/s689/IMG_20130309_093607.jpg">
+
+<p>It was a bit of a pain to level both the board and the projector. Business cards did decent job giving me small increments.
+
+<img src="https://lh3.googleusercontent.com/-4lUGTPUob4g/UTt5p7H14CI/AAAAAAAAFOE/kccp1ykoqqY/s517/IMG_20130309_100421.jpg">
+
+<p>Because normal people use the poster session to pin a poster to a cork board, I had to improvise. I cut and bent a coat hanger into 4 pieces and created hooks to hold my boards to the top of the frame.
+
+<img src="https://lh3.googleusercontent.com/-TGf1EWWKtxY/UUXf67pV2BI/AAAAAAAAFY4/dV-QeepGchA/s689/IMG_20130317_082301.jpg">
+
+<p>I came to you, hackers of PyCon, with the plea; join me in building something new and cool.
+
+<h3>Plum Garage</h3>
+
+<p>I have long been <a href="https://github.com/issackelly/Creating-Web-APIs-that-are-a-Joy-To-Use">an advocate</a> for open, human comprehensible, machine consumable APIs. With these two projects there is some immense joy in mining for gold across the network to give new life to closed devices. Once that's over, it's quickly surpassed by a sadness that the business interests, engineers, and developers involved aren't pushing for an open, inter-operable platform.
+
+<p>Through many conversations with my friend<a href="http://open.nasa.gov/blog/author/weshagh/">William Esahgh<a> <a href="#1">[1]</a> we determined that we needed to help push this forward.
+
+<p>It was decided that it would take many people getting involved to have any measure of success. Lots of things would need to happen in order to get to a place where all devices were able to connect to each other and receive common control and mechanisms.
+
+<p>We want to work together with the larger community to build a common control platform. It should accept any device that it possibly can. It should be easy to program. It should take into account that there is a long history of devices and platforms with similar goals.
+
+<p>Many other platforms have come before. X10, Insteon, Zigbee, and many custom proprietary platforms are examples. It's also possible as a hobbyist to easily create new devices, connect sensors, and more. How though, can these systems talk to each other? How can you create connections that are not the most simple juxtapositions of closely related devices? How can you connect the devices in the most cost-efficient way for your application?
+
+<p>This is where Plum Garage comes in. Together we can build a common platform. We can teach each other how to program for the devices around us, and fill in all the gaps with open software and hardware as needed.
+
+<p>The next step is to build a specification for this control layer. I believe that this should happen collaboratively, and in the open. I could spend my time building what I want or need, or we can come up with something more broadly applicable. My focus is currently on custom (proprietary or home-made), low-cost, hackable devices that won't break my security deposit on my apartment. Others are building, or have X10 or Insteon systems.
+
+<h3>Get Started</h3>
+
+<p>To get started, subscribe and <a href="https://groups.google.com/forum/?fromgroups#!forum/plumgarage">make a post</a> on the mailing list. Introduce yourself, and let us know why you're interested.
+
+<p>I'm sincerely looking forward to this.
+
+<hr/>
+
+<p><a name="1">[1]</a> William is no longer at NASA, we're now colleagues at Nebula. Nebula is not affiliated in any way with Plum Garage.
+
+<p>P.S. A couple more things.
+    <ul>
+        <li>I will say, to the credit of Phillips, they have now released a public API specification for their bridge. I hear it's much more complete than the functionality that I found.
+        <li>Thanks Katie for your <a href="http://therealkatie.net/blog/2012/mar/13/pycon-2012-thoughts-poster-session/">excellent post</a> on what to expect at the poster sessions. Thanks to you I had the proper supplies.
+        <li>You can subscribe to the mailing list without posting. That's cool too.
+    </ul>
+
+
+{% endblock %}

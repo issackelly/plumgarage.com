@@ -31,6 +31,7 @@ def preBuild(site):
 	# Build all the posts
 	for page in site.pages():
 		if page.path.startswith(POSTS_PATH):
+			print "Building blog page %s" % page.path
 
 			# Skip non html posts for obious reasons
 			if not page.path.endswith('.html'):

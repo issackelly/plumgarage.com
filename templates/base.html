@@ -22,14 +22,12 @@
 
 
 	{% block footer %}
-	<footer>
-		<a href="/controller.html">Controller</a> | <a href="/about.html">About</a>
+	<footer><nav>
+		<a href="/controller.html">Controller</a> | <a href="/about.html">About</a> | <a href="/blog/">Blog</a> | <a href="https://twitter.com/plumgarage">Twitter</a> | <a href="https://github.com/plumgarage">Github</a> | <a href="https://groups.google.com/forum/?fromgroups#!forum/plumgarage">Mailing List</a></nav>
 	</footer>
 	{% endblock %}
 
 	{% block scripts %}
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="{{ STATIC_URL }}/js/main.js"></script>
 	<script type="text/javascript">
 	  var _gauges = _gauges || [];
 	  (function() {
